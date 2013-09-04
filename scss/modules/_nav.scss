@@ -1,0 +1,72 @@
+
+nav{display: block;}
+
+@media screen and (max-width: 50em) {
+
+
+		nav {
+
+			
+			ul{display: none;}
+
+			&:before {
+
+				content: "menu";
+				display: block;
+				position: absolute;
+				background: $secondary-color;
+				color: white;
+				text-align: right;
+				padding: 2px 6px;
+				border-radius: 4px;
+				width: 100px;
+				text-align: center;
+				top: 4px; right:4px;
+			}
+
+
+		 
+
+		}
+
+		nav.active {
+
+			ul{display: block;}
+			&:before{display: none;}
+
+			li ul {display: none;}
+		    li.active ul {display: block;}
+		}
+
+
+}
+
+
+@media screen and (min-width: 50em) {
+
+
+   nav {
+
+   	@include clearfix;
+
+   	>ul>li {
+   		float: left;
+   	}
+   
+li ul {
+
+	display: block;
+	position: absolute;
+	left: -1000em;
+}
+
+li:hover ul {
+
+	left: auto;
+}
+
+
+}
+
+}
+

@@ -1,0 +1,109 @@
+
+
+header {
+
+	background: transparent  url("../images/slideshow/around-the-world.jpg") no-repeat top;
+	background-size: 100%;
+	height: 0px;
+	padding-top: 66%;
+	text-indent: -1000em ;
+
+}
+
+
+
+.story {
+
+	@media screen and (min-width:25em ){
+		@include span-columns(9);
+		@include omega;
+        }
+
+	p {
+
+		 @media screen and (min-width: 25em){
+			@include span-columns(9);
+		}
+		 @media screen and (min-width: 50em){
+			@include span-columns(6,9);
+		}
+	}
+
+			blockquote {
+
+				    @media screen and (min-width: 25em){
+
+					@include span-columns(3);
+					@include omega;
+
+
+				            }
+
+				    @media screen and (min-width: 50em){
+
+					@include span-columns(3,9);
+					@include omega;
+
+
+				            }
+			           }
+
+	
+     }
+
+footer {
+
+	@media screen and (min-width: 50em){
+    @include span-columns(3);
+      }
+
+}
+
+figure {
+
+	clear: both;
+	@include clearfix;
+	padding: 10px;
+
+	
+}
+
+
+
+
+img {
+
+
+	@media screen and (min-width: 25em) {
+
+          @include span-columns(9);
+
+	}
+
+	@media screen and (min-width: 50em) {
+
+          @include span-columns(6,9);
+
+	}
+
+
+}
+
+figcaption {
+
+
+
+	@media screen and (min-width: 25em) {
+
+		@include span-columns(3);
+		@include omega;
+	}
+
+	@media screen and (min-width: 50em) {
+
+		@include span-columns(3,9);
+		@include omega;
+		
+	}
+}
+

@@ -1,0 +1,44 @@
+@import "compass/css3" ;
+
+.font li{
+
+	background: #eea;
+	position: relative;
+
+	 &:before {
+
+    	content: "";
+    	display: block;
+    	position: absolute;
+    	
+    	top: 0px;
+    	left: 50px;
+    	width:128px;
+    	height: 128px;
+
+    	font-size: 100px;
+    	line-height: 128px;
+    	text-align: center;
+
+    	font-family: 'Font Awesome';
+    	
+
+    }
+
+    &.sunny:before{content: "\f13d";}
+    &.partly-cloudy:before{content: "\f13d";}
+    &.rain:before{content: "\f13d";}
+    &.night:before{content: "\f13d";}
+
+    &.sunny:before {
+
+    	color: #ff0;
+    	@include text-shadow(1px 1px 5px rgba(black, 0.5));
+    	background-color: red;
+    }
+
+
+
+
+  
+}

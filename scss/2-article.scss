@@ -1,0 +1,27 @@
+@import "base/susy";
+@import "base/normalize";
+@import "base/typography";
+@import "base/colors";
+
+@import "layout/grid";
+
+
+.slideshow{display: none;}
+
+
+@import "modules/article_design";
+@import "modules/nav_design";
+
+@import "modules/article";
+@import "modules/nav";
+
+@import "modules/nav_facebook";
+
+@import "modules/slideshow";
+
+#page  {
+	
+	
+	// @include susy-grid-background;
+}
+

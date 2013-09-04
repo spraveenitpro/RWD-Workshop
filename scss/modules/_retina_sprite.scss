@@ -1,0 +1,36 @@
+.sprite li{
+
+	position: relative;
+
+	//background:  #eee url('../images/icons.png') no-repeat top center;
+
+    &:before {
+
+    	content: "";
+    	display: block;
+    	position: absolute;
+    	background: black;
+    	top: 0px;
+    	left: 50px;
+    	width:128px;
+    	height: 128px;
+    	background: transparent url("../images/icons.png") no-repeat top center;
+
+    }
+
+   &.partly-cloudy:before{background-position: 0 -140px;}
+   &.rain:before{background-position: 0 -280px;}
+   &.night:before{background-position: 0 -410px;}
+
+
+   @media (-webkit-min-device-pixel-ratio: 2), (webkit-min-device-pixel-ratio: 2) {
+
+ 	&:before{
+ 	background-image: url('../images/icons-2x.png');
+ 	background-size: 128px auto;
+ 	
+    }
+
+ }
+  
+}

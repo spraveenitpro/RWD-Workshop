@@ -1,0 +1,64 @@
+
+@import "compass/css3";
+
+@media screen and (max-width: 50em) 
+{
+
+
+		nav {
+            
+			position: absolute;
+			width: 200px;
+			height: 100%;
+			z-index: 1;
+			overflow:auto;
+		
+		 
+				 ul {
+				 	display: block;
+				 }
+
+				 &:before{display: none;}
+
+				 &:target+#page {
+                   
+                   left: 200px;
+                   .menu.show{display: none;}
+                   .menu.hide{display: block;}
+
+				 }
+
+		   }
+
+         #page {
+      	    position: relative;
+      	    z-index: 10;
+      	    background: $background-color;
+      	    @include transition(0.5s);
+      	    @include box-shadow(0 10px 10px rgba(black, 0.5));
+
+		      	   // &.active-navigation {
+
+		      	    //	left: 200px;
+		      	  //  }
+
+
+		      	  .menu {
+
+		      	  	display: block;
+		      	  	position: absolute;
+		      	  	background: $secondary-color;
+		      	  	color: white;
+		      	  	padding: 4px 8px;
+		      	  	text-decoration: none;
+		      	  	
+		      	  	@include border-radius(0 0 12px 12px);
+		      	  }  
+
+		      	  .menu.hide {
+		      	  	display: none;
+		      	  }
+
+               }
+
+}

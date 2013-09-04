@@ -1,0 +1,105 @@
+@import "base/susy";
+@import "base/normalize";
+@import "base/typography";
+@import "base/colors";
+
+
+$total-columns: 12;
+$column-width: 5em;
+$gutter-width: 1em;
+$grid-padding: $gutter-width;
+
+@include border-box-sizing;
+
+
+#page  {
+	
+
+	@include container;
+	@include susy-grid-background;
+}
+
+
+ul{margin: 0;padding: 0;}
+
+li {
+
+	@include span-columns(6);
+	@include nth-omega(2n);
+
+    margin-bottom: .5em;
+	background-color: $secondary-color;
+	text-align: center;
+	
+
+    @media screen and (min-width: 30em) {
+
+
+    	@include span-columns(4);
+    	@include nth-omega(3n);
+        @include remove-nth-omega(2n);
+    }
+
+
+    @media screen and (min-width: 50em) {
+
+    	@include span-columns(2);
+    	@include remove-nth-omega(3n);
+    	@include nth-omega(6n);
+    }
+
+
+
+}
+
+
+
+
+p {
+
+
+    @include span-columns(12);
+	
+	background-color: $light-color;
+	padding: 20px;
+
+
+	@media screen and (min-width: 30em) {
+
+
+    	@include span-columns(6);
+    	@include nth-omega(2n);
+    }
+
+
+    @media screen and (min-width: 50em) {
+
+    	@include span-columns(4);
+    	@include remove-nth-omega(2n);
+        @include nth-omega(3n);
+
+
+    	
+    	
+    }
+
+}
+
+a {
+
+   display: block;
+   background: $secondary-color;
+   color: white;
+}
+
+ul {
+
+    outline: solid 1px black;
+    @include clearfix;
+}
+
+
+
+
+
+
