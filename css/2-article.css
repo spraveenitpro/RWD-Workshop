@@ -945,3 +945,23 @@ span {
   font-size: 30px;
   text-shadow: rgba(0, 0, 0, 0.6) 2px 2px 2px;
 }
+
+/* line 3, ../scss/modules/_flash.scss */
+.flash {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-top: 66%;
+  margin: 20px 0;
+}
+/* line 13, ../scss/modules/_flash.scss */
+.flash iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
